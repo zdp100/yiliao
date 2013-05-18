@@ -1,0 +1,36 @@
+.container {width:950px; margin:0 auto; }
+
+#header {height:194px; background:url(images/qiantai/images/header-bg.gif) left top repeat-x #fff; }
+#header, #content, #extra-content, #footer { font-size:0.75em;}
+
+.col-1, .col-2, .col-3 { float:left;}
+
+/*======= index.html =======*/
+#content .page1 .col-1 {width:302px; margin-right:22px;}
+#content .page1 .col-2 {width:302px; margin-right:22px;}
+#content .page1 .col-3 {width:302px;}
+#extra-content .col-1 {width:464px; margin-right:22px;}
+#extra-content .col-2 {width:464px;}
+
+/*======= index-2.html =======*/
+#content .page2 .col-1 {width:302px; margin-right:22px;}
+#content .page2 .col-2 {width:302px; margin-right:22px;}
+#content .page2 .col-3 {width:302px;}
+
+/*======= index-4.html =======
+#page5 #content .col-1 {width:302px; margin-right:22px;}
+#page5 #content .col-2 {width:626px;}*/
+
+#content .page4 .col-1 {width:202px; margin-right:22px;}
+#content .page4 .col-2 {width:726px;}
+
+/*======= index-5.html =======*/
+#content .page5 .col-1 {width:302px; margin-right:22px;}
+#content .page5 .col-2 {width:302px; margin-right:22px;}
+#content .page5 .col-3 {width:302px;}
+
+
+/*=========================*/
+
+
+#footer {background:url(images/qiantai/images/footer-bg.gif) left top repeat-x #717171;}

@@ -1,0 +1,46 @@
+﻿@model MvcApplication1.Models.UserLoginViewModel
+           
+@{
+    Layout = null;
+}
+
+
+<div id="ulogin" class="userlogin" style="margin:0 auto;">   
+@using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "ulogin", HttpMethod = "Post", OnSuccess = "" }))
+    {
+        <input id="url" name="url" type="hidden" value="@ViewBag.url"/>
+        <div style="height:30px;text-align:center;">
+            @Html.ValidationSummary(true)
+        </div>
+    
+    <div class="editor">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.UserName)
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div class="editor">
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PassWord)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PassWord)
+            @Html.ValidationMessageFor(model => model.PassWord)
+        </div>
+        <div style="clear:both;"></div>        
+    </div>
+
+    <div class="editor">
+        <div style="padding-left:65px;">
+            <button type="submit" class="pn vm" tabindex="904" style="width: 75px;"><strong>登录</strong></button>
+        </div>
+        
+    </div>
+ 
+
+    }  
+    </div> 

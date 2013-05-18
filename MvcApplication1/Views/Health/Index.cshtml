@@ -1,0 +1,67 @@
+﻿@model PagedList.StaticPagedList<MvcApplication1.Models.HealthModels>
+
+@{
+    ViewBag.Title = "健康信息列表";
+}
+@using MvcApplication1.Common;
+@using PagedList;
+@using PagedList.Mvc;
+<link href="@Url.Content("~/Content/PagedList.css")" rel="stylesheet" type="text/css" />
+
+<p>
+    @Html.ActionLink("添加", "Create")
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        查找标题或类型:@Html.TextBox("searchString")
+        <input type="submit" value="查找"/>
+    </p>
+}
+<table class="gridview">
+    <tr>
+        <th>
+            健康标题
+        </th>
+        <th>
+            健康类型
+        </th>
+        <th>
+            发布日期
+        </th>
+        <th>
+            作者
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HealthHead)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HealthTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PubDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.HealthID }) |
+            @Html.ActionLink("详情", "HealthCornerShow", "qiantai", new { id = item.HealthID }, new { target = "new" }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.HealthID },new{onclick="return confirm('你确定要删除这条记录吗？')"})
+        </td>
+    </tr>
+}
+
+</table>
+<div>
+    @if (Model.Count!=0)
+    {
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("index", new { page }), PagedListRenderOptions.PageNumbersOnly)
+    }
+</div>

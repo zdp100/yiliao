@@ -1,0 +1,64 @@
+﻿@model PagedList.StaticPagedList<MvcApplication1.Models.ReplyModel>
+
+
+
+    @{
+        int i = (Model.PageNumber - 1)*Model.PageSize;
+    }
+    @foreach (var m in Model)
+    {
+        i++;
+    
+    <div id="post_16994734">
+    <table id="pid16994734" summary="pid16994734" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td class="pls"><div class="pi">
+              <div class="authi"><a href="#" target="_blank" class="xw1">@m.Users.UserName</a> </div>
+            </div>
+            <div class="p_pop blk bui" id="userinfo16994734" style="display: none; margin-top: -11px;">
+              <div class="m z">
+                <div id="userinfo16994734_ma"></div>
+              </div>
+            </div>
+            <div>
+              <div class="avatar" onmouseover="showauthor(this, 'userinfo16994734')"><a href="#" target="_blank"><img style="width:120px;" src="@(m.Users.Images ?? "/Content/images/noavatar_big.gif")"></a></div>
+            </div>
+            <dl class="pil cl">
+              <dt>注册时间</dt>
+              <dd>@string.Format("{0:yyyy-MM-dd}",(m.Users.RegisterDate??DateTime.Now))</dd>
+
+            </dl></td>
+          <td class="plc"><div class="pi"> <strong> <a href="#" ><em>@i</em>楼</a> </strong>
+              <div class="pti">
+                <div class="pdbt"> </div>
+                <div class="authi"> <img class="authicn vm" id="authicon16994734" src="@Url.Content("~/Content/images/online_member.gif")"> <em id="authorposton16994734">发表于 @string.Format("{0:yyyy-MM-dd HH:mm:ss}",m.PubDate) </em> </div>
+              </div>
+            </div>
+            <div class="pct">
+              <div class="pcb">
+                <div class="t_fsz">
+                  <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td class="t_f" id="postmessage_16994734"> 
+                        @Html.Raw(m.Content)
+                        
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="comment_16994734" class="cm"> </div>
+                <div id="post_rate_div_16994734"></div>
+              </div>
+            </div></td>
+        </tr>
+        <tr class="ad">
+          <td class="pls"></td>
+          <td class="plc"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    }

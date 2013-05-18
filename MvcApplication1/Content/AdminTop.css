@@ -1,0 +1,18 @@
+﻿*{
+	font-size: 12px; color: white
+}
+body
+{
+    background-image: url(images/bg.gif);
+    margin: 0px;
+    background-repeat: repeat-x;
+}
+#logo {
+	color: white
+}
+#logo a {
+	color: white
+}
+form {
+	margin: 0px
+}

@@ -1,0 +1,70 @@
+﻿@model MvcApplication1.Models.DoctorsModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>DoctorsModels</legend>
+
+    <div class="display-label">DoctorName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DoctorName)
+    </div>
+
+    <div class="display-label">sex</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sex)
+    </div>
+
+    <div class="display-label">Birthday</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Birthday)
+    </div>
+
+    <div class="display-label">Images</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Images)
+    </div>
+
+    <div class="display-label">NativePlace</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NativePlace)
+    </div>
+
+    <div class="display-label">Nationality</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nationality)
+    </div>
+
+    <div class="display-label">KeySkill</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.KeySkill)
+    </div>
+
+    <div class="display-label">QQ</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QQ)
+    </div>
+
+    <div class="display-label">Phone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">Remark</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remark)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.DoctorID }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>

@@ -1,0 +1,59 @@
+﻿@model ReadersModels
+@{
+    ViewBag.Title = "现任领导";
+}
+
+   <!-- content -->
+   <div id="content">
+      <div class="container">
+      	<!-- main-banner-small begin -->
+         <div class="main-banner-small">
+         	<div class="inner">
+            	<h1>Even the biggest success Starts with a first step</h1>
+            </div>
+         </div>
+         <!-- main-banner-small end -->
+         <div class="wrapper page4">
+         	@Html.Partial("_AboutLeft")
+            <div class="col-2 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                           <div class="inner">
+                                               <h2>专家介绍</h2>
+                                               <img alt="" width="66" height="66" src="@Model.Images" />
+                                               <h4 style="line-height: 40px;"><strong>@Model.ReaderName</strong></h4>
+                                               <p>职位：@Model.Position</p>
+                                               <p>职责：@Model.Duty</p>
+                                               <p>性别：@Model.Sex</p>
+                                               <p>生日：@string.Format("{0:yyyy-MM-dd}",Model.Birthday)</p>
+                                               <p>国籍：@Model.Nationality</p>
+                                               <p>籍贯：@Model.NativePlace</p>
+                                               <p>电子邮件：@Model.Email</p>
+                                               <p>电话号码：@Model.Phone</p>
+                                               <p>QQ：@Model.QQ</p>
+                         
+                                                
+                                           </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>
+         </div>
+      </div>
+   </div>
+

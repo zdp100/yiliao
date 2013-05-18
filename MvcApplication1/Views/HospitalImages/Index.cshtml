@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MvcApplication1.Models.HospitalImagesModels>
+
+@{
+    ViewBag.Title = "添加";
+}
+
+
+<p>
+    @Html.ActionLink("添加", "Create")
+</p>
+<table class="gridview">
+    <tr>
+        <th>
+            标题
+        </th>
+        <th>
+            说明
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Illustrate)
+        </td>
+
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.ImageID }) |
+            @Html.ActionLink("详情", "ImagesShow", "qiantai", new { id = item.ImageID }, new { target = "new" }) |
+            @Html.ActionLink("删除", "Delete", new { id = item.ImageID }, new { onclick = "return confirm('你确定要删除这条记录吗？')" })
+        </td>
+    </tr>
+}
+
+</table>

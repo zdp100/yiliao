@@ -1,0 +1,22 @@
+﻿@using MvcApplication1.Common
+@model MvcApplication1.Models.MedicalTechModels
+@{
+    ViewBag.Title = Model.Title;
+}
+
+   <!-- content -->
+   <div id="content">
+      <div class="container">
+      	<!-- main-banner-small begin -->
+         <div class="main-banner-small">
+         	<div class="inner">
+            	<h1>Even the biggest success Starts with a first step</h1>
+            </div>
+         </div>
+         <!-- main-banner-small end -->
+         <div class="wrapper page4">
+         	@Html.Partial("HomeLeft",ViewBag.left as HomeLeft)
+            @Html.Partial("HomeRightShow", new HomeRightShow { Type = ViewBag.type, Title = Model.Title, PubDate = Model.PubDate, UserName = Model.UserName, Count = Model.Count, Content = Model.Content })
+         </div>
+      </div>
+   </div>

@@ -1,0 +1,94 @@
+﻿@model PagedList.StaticPagedList<MvcApplication1.Models.DoctorsModels>
+@{
+    ViewBag.Title = "DoctorsAtm";
+}
+@using PagedList
+@using PagedList.Mvc
+
+<link href="@Url.Content("~/Content/PagedList.css")" rel="stylesheet" type="text/css" />
+   <!-- content -->
+   <div id="content">
+      <div class="container">
+      	<!-- main-banner-small begin -->
+         <div class="main-banner-small">
+         	<div class="inner">
+            	<h1>Even the biggest success Starts with a first step</h1>
+            </div>
+         </div>
+         <!-- main-banner-small end -->
+         <div class="wrapper page4">
+         	<div class="col-1 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                           <div class="inner">
+                                               <h2>名师荟萃</h2>
+                                              <div class="clr"></div>
+                                              <ul class="sb_menu">
+                                                <li><a href="#">专家介绍</a></li>
+                                                <li><a href="#">专家微博</a></li>
+                                              </ul>
+                                           </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>
+            <div class="col-2 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                          <div class="inner">
+                                             <h2>专家介绍</h2>
+                                              <ul class="list2">
+                                                  @foreach (var m in Model)
+                                                  {
+                                                      <li>
+                                                          <a href="/DoctorsAtmShow/@m.DoctorID"><img width="66" height="66" alt="@m.DoctorName" src="@m.Images" /></a>
+                                                          <a href="/DoctorsAtmShow/@m.DoctorID"><h5>@m.DoctorName</h5></a>
+                                                          @m.KeySkill
+                                                      </li>
+                                                  }
+												
+                                              </ul>
+                                              <div>
+                                                  @if (Model.Count > 0)
+                                                  {
+                                                      @Html.PagedListPager((IPagedList)Model, page => Url.Action("DoctorsAtm", new { page }),new PagedListRenderOptions(){LinkToNextPageFormat = "下一页",LinkToPreviousPageFormat ="上一页" })
+                                                  }
+                                              </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>
+         </div>
+      </div>
+   </div>

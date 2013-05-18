@@ -1,0 +1,68 @@
+﻿@model PagedList.StaticPagedList<HospitalImagesModels>
+@{
+    ViewBag.Title = "医院图片";
+}
+@using MvcApplication1.Common
+<link href="@Url.Content("~/Content/PagedList.css")" rel="stylesheet" type="text/css" />
+   <!-- content -->
+   <div id="content">
+      <div class="container">
+      	<!-- main-banner-small begin -->
+         <div class="main-banner-small">
+         	<div class="inner">
+            	<h1>Even the biggest success Starts with a first step</h1>
+            </div>
+         </div>
+         <!-- main-banner-small end -->
+         <div class="wrapper page4">
+         	@Html.Partial("_AboutLeft")
+            <div class="col-2 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                           <div class="inner">
+                                               <h2>医院图片</h2>
+                                               <div class="carousel1">
+                                                       @if (Model.Count == 0)
+                                                       {
+                                                           <p>没有图片</p>
+                                                       }                                                  
+                                                   <ul>
+                                                       @foreach (var m in Model)
+                                                       {
+                                                           <li>
+                                                               <a href="/ImagesShow/@m.ImageID"><div style="width:200px;height:160px;overflow:hidden;"><img style="width:200px;" alt="" src="@m.ImageUrl"></div></a>
+                                                               <div style="line-height: 24px;text-align:center;"><a href="/ImagesShow/@m.ImageID">@m.Title.stringformat(20)</a></div>
+                                                           </li>
+                                                       }
+                                                       @*<li><img style="width:200px;" alt="" src="/Content/images/qiantai/images/image_261x179.gif"></li>*@
+                                                   </ul>
+                                               </div>
+                                               <div>
+                                                   @if (Model.Count > 0)
+                                                   {
+                                                       @Html.PagedListPager((IPagedList)Model, page => Url.Action(ViewBag.strActions, new { page }), new PagedListRenderOptions() { LinkToPreviousPageFormat = "上一页", LinkToNextPageFormat = "下一页", LinkToFirstPageFormat = "首页", LinkToLastPageFormat = "尾页" })
+                                                   }
+                                               </div>
+                                           </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>
+         </div>
+      </div>
+   </div>

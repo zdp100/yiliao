@@ -1,0 +1,35 @@
+﻿@model MvcApplication1.Models.MessageInfoModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>MessageInfoModels</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">Content</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Content)
+    </div>
+
+    <div class="display-label">PubDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PubDate)
+    </div>
+
+    <div class="display-label">Users</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Users.UserName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.MessageID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

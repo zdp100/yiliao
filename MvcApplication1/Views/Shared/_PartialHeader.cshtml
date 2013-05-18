@@ -1,0 +1,133 @@
+﻿   <!-- header -->
+   <div id="header">
+      <div class="container">
+          <div class="row-1">
+              <div class="logo"><a href="/"><img alt="" src="../../Content/images/qiantai/images/logo.jpg" /></a></div>
+              
+              <div style="height:100px;float:right;">
+                  <div class="header-login">
+                      @Html.Action("islogin","qiantai")
+                  </div>
+                  <ul class="top-links" style="padding:5px 35px 0 0;">
+                      <li><a href="/"><img alt="" src="../../Content/images/qiantai/images/top-icon1.jpg" /></a></li>
+                      <li><a href="/About"><img alt="" src="../../Content/images/qiantai/images/top-icon2.jpg" /></a></li>
+                      <li><a href="/OnlineConsult"><img alt="" src="../../Content/images/qiantai/images/top-icon3.jpg" /></a></li>
+                  </ul> 
+              </div>
+              
+              
+          </div>
+          @{
+              var strUrl = Request.Url.LocalPath.ToLower();
+              if (strUrl.Length > 0)
+              {
+                  var str = strUrl.Trim('/').Split('/');
+                  if (str.Length > 0)
+                  {
+
+                   
+                      strUrl = str[0];
+                      if (str[0].Contains("?"))
+                      {
+                          var str1 = str[0].Split('?');
+
+                          strUrl = str1[0];
+                      }
+
+                      string[][] strArr = new string[][]
+                          {
+                              new string[] {"about", "reader", "readershow", "images"},
+                              new string[] {"doctorsatm", "doctorsatmshow"},
+                              new string[] {"news", "newsshow"},
+                              new string[] {"news", "newsshow"},
+                              new string[] {"healthcorner", "healthcornershow"},
+                              new string[] {"medicaltech", "medicaltechshow"},
+                              new string[] {"onlineconsult", "onlineconsultshow"}
+
+                          };
+                      foreach (var s in strArr)
+                      {
+                          if (s.Contains(strUrl.ToLower()))
+                          {
+                              strUrl = s[0];
+                          }
+                      }
+                      
+                  }
+              }
+          }
+         <div class="row-2">
+         	<!-- nav box begin -->
+            <div class="nav-box">
+            	<div class="left">
+               	<div class="right">
+                  	<ul>
+                     	<li><a href="/" class="first"><em><b>网站首页</b></em></a></li>
+                        <li><a href="/about"><em><b>医院概况</b></em></a></li>
+                        <li><a href="/TreatGuid"><em><b>就医指南</b></em></a></li>
+                        <li><a href="/DoctorsAtm"><em><b>名医荟萃</b></em></a></li>
+                        <li><a href="/News"><em><b>新闻动态</b></em></a></li>
+                        <li><a href="/HealthCorner"><em><b>健康园地</b></em></a></li>
+						<li><a href="/MedicalTech"><em><b>医疗技术</b></em></a></li>
+                        <li><a href="/HospitalCulture"><em><b>医院文化</b></em></a></li>
+                        <li><a href="/ContactUs"><em><b>联系我们</b></em></a></li>
+                        <li><a href="/OnlineConsult" class="last"><em><b>医院论坛</b></em></a></li>
+						
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!-- nav box end -->
+         </div>
+      </div>
+   </div>
+<script type="text/javascript">
+    $(function () {
+        var strUrl = "@strUrl";
+        $("#header .row-2 li").each(function () {
+            var str = $(this).find("a").attr("href").toLowerCase().split('/');
+
+            if (strUrl == str[1]) {
+                if ($(this).find("a").hasClass("first")) {
+                    $(this).find("a").removeClass().addClass("first-current");
+                } else if ($(this).find("a").hasClass("last")) {
+                    $(this).find("a").removeClass().addClass("last-current");
+                } else {
+                    $(this).find("a").addClass("current");
+                }
+
+                return false;
+            }
+        });
+
+        $("#login").click(function () {
+            if ($("#ulogin").html() != null) {
+                $("#ulogin").dialog({
+                    resizable: false,
+                    title: "用户登录",
+                    width: 400,
+                    height: 300,
+                    modal: true
+                });
+            } else {
+                var url = "@Request.Url.PathAndQuery";
+                $.get('/ulg' + '?url=' + url, function (data) {
+                    $(data).dialog({
+                        resizable: false,
+                        title: "用户登录",
+                        width: 400,
+                        height: 300,
+                        modal: true
+                    });
+                });
+            }
+        });
+
+        $("#outLogin").click(function () {
+            var url = location.pathname + location.search;
+            location.href = "/OutLogin" + "?url="+url;
+        });
+
+
+    });
+</script>

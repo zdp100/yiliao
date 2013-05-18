@@ -1,0 +1,40 @@
+﻿@model PagedList.StaticPagedList<MvcApplication1.Common.listModel>
+@using PagedList
+@using PagedList.Mvc
+            <div class="col-2 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                          <div class="inner">
+                                             <h2>@ViewBag.Type</h2>
+                                              <ul class="new_list">
+                                                  @foreach (var m in Model)
+                                                  {
+                                                      <li><a href="/@ViewBag.strAction/@m.id"><strong>@m.Title</strong></a><span style="float: right;">@string.Format("{0:yyyy-MM-dd}",m.PubDate)</span></li>
+                                                  }
+                                              </ul>
+                                              <div>
+                                                  @if (Model.Count > 0)
+                                                  {
+                                                      @Html.PagedListPager((IPagedList)Model, page => Url.Action(ViewBag.strActions, new { page, type = ViewBag.strType == ViewBag.strTypes ? "" : ViewBag.strType }))
+                                                  }
+                                              </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>

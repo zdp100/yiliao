@@ -1,0 +1,118 @@
+﻿@model MvcApplication1.Models.UsersModels
+@{
+    Layout = null;
+}
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<h3 class="mt">个人资料</h3>
+
+
+@using (Ajax.BeginForm("userSetPersonal",new AjaxOptions() { UpdateTargetId = "usermain", HttpMethod = "Post", OnSuccess = "" }))
+{
+
+@Html.HiddenFor(model=>model.UserID)
+@Html.HiddenFor(model=>model.UserName)
+@Html.HiddenFor(model=>model.UserPassword)
+<table width="100%" cellspacing="0" cellpadding="0" class="tfm" id="profilelist">
+    <tbody><tr>
+               <th>用户名</th>
+               <td>@Model.UserName</td>
+           </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Name)</th>
+            <td>
+                @Html.TextBoxFor(model => model.Name, new { @class = "px" })
+                @Html.ValidationMessageFor(model => model.Name)
+                <div class="rq mtn" id="showerror_realname"></div>
+                <p class="d"></p>
+            </td>
+        </tr>
+        <tr id="tr_gender">
+            <th id="th_gender">@Html.LabelFor(model => model.Sex)</th>
+            <td id="td_gender">
+                @Html.DropDownListFor(model => model.Sex, ViewBag.sexlist as SelectList,string.Empty)
+                @Html.ValidationMessageFor(model => model.Sex)
+                <div class="rq mtn" id="showerror_gender"></div>
+                <p class="d"></p>
+            </td>
+
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Birthday)</th>
+            <td>
+                @Html.TextBoxFor(model => model.Birthday, new { @class = "px", style = "width:100px",Value = string.Format("{0:yyyy-MM-dd}", Model.Birthday) })
+                @Html.ValidationMessageFor(model => model.Birthday)
+                <div class="rq mtn" id="showerror_birthday"></div>
+                <p class="d"></p>
+            </td>
+
+        </tr>
+        <tr id="tr_birthcity">
+            <th id="th_birthcity">@Html.LabelFor(model => model.NativePlace)</th>
+            <td id="td_birthcity">
+                @Html.TextBoxFor(model => model.NativePlace, new { @class = "px" })
+                @Html.ValidationMessageFor(model => model.NativePlace)
+                <div class="rq mtn" id="showerror_birthcity"></div>
+                <p class="d"></p>
+            </td>
+
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Nationality)</th>
+            <td>
+                @Html.TextBoxFor(model => model.Nationality, new { @class = "px" })
+                @Html.ValidationMessageFor(model => model.Nationality)
+                <div class="rq mtn" id="showerror_residecity"></div>
+                <p class="d"></p>
+                </td>
+
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.QQ)</th>
+            <td>
+                @Html.TextBoxFor(model => model.QQ, new { @class = "px" })
+                @Html.ValidationMessageFor(model => model.QQ)
+                <div class="rq mtn" id="showerror_affectivestatus"></div>
+                <p class="d"></p>
+            </td>
+
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Phone)</th>
+            <td>
+                @Html.TextBoxFor(model => model.Phone, new { @class = "px" })
+                @Html.ValidationMessageFor(model => model.Phone)
+                <div class="rq mtn" id="showerror_lookingfor"></div>
+                <p class="d"></p>
+            </td>
+
+        </tr>
+        <tr>
+            <th>@Html.LabelFor(model => model.Email)</th>
+            <td>
+                @Html.TextBoxFor(model => model.Email, new { @class = "px" })
+                @Html.ValidationMessageFor(model => model.Email)
+                <div class="rq mtn" id="showerror_bloodtype"></div>
+                <p class="d"></p>
+                </td>
+
+            </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <td >
+                    <input type="hidden" name="profilesubmit" value="true">
+                    <button type="submit" name="profilesubmitbtn" id="profilesubmitbtn" value="true" class="pn pnc"><strong>保存</strong></button>
+                    <span id="submit_result" class="rq"></span>
+                </td>
+            </tr>
+        </tbody></table>
+}
+@Html.Raw(ViewBag.message)
+<script type="text/javascript">
+    $(function() {
+        $("#Birthday").datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    })
+</script>

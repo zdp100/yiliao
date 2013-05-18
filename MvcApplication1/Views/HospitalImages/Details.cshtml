@@ -1,0 +1,30 @@
+﻿@model MvcApplication1.Models.HospitalImagesModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>HospitalImagesModels</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">Illustrate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Illustrate)
+    </div>
+
+    <div class="display-label">ImageUrl</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ImageUrl)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ImageID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

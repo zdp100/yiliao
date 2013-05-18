@@ -1,0 +1,133 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+    <title>无标题页</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style type="text/css"> 
+*{
+	font-size: 12px
+}
+#menutree a {
+	color: #566984; text-decoration: none
+}
+</style>
+    <script src="@Url.Content("~/Scripts/TreeNode.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/Tree.js")" type="text/javascript"></script>
+    <meta content="mshtml 6.00.2900.5848" name="generator">
+</head>
+<body style="background-position-y: -120px; background-image: url(@Url.Content("~/Content/images/bg.gif"));
+    background-repeat: repeat-x">
+<table id="NavLeft" height="100%" cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tbody>
+        <tr>
+            <td style="height:29px; width:10px; line-height: 1px;">
+                <img src="@Url.Content("~/Content/images/bg_left_tl.gif")">
+            </td>
+            <td style="font-size: 18px; background-image: url(@Url.Content("~/Content/images/bg_left_tc.gif")); color: white; font-family: system">
+                Main Menu
+            </td>
+            <td style="width:10px; line-height: 1px;">
+                <img src="@Url.Content("~/Content/images/bg_left_tr.gif")">
+            </td>
+        </tr>
+        <tr>
+            <td style="background-image: url(@Url.Content("~/Content/images/bg_left_ls.gif"))">
+            </td>
+            <td id="menuTree" style="padding-right: 10px; padding-left: 10px; padding-bottom: 10px;
+                padding-top: 10px; height: 100%; background-color: white" valign="top">
+            </td>
+            <td style="background-image: url(@Url.Content("~/Content/images/bg_left_rs.gif"))">
+            </td>
+        </tr>
+        <tr>
+            <td style="width:10px; line-height: 1px;">
+                <img src="@Url.Content("~/Content/images/bg_left_bl.gif")"/>
+            </td>
+            <td style="background-image: url(@Url.Content("~/Content/images/bg_left_bc.gif")); background-repeat: repeat-x; font-size: 10px; height: 10px;">
+            </td>
+            <td style="width:10px; line-height: 1px;">
+                <img src="@Url.Content("~/Content/images/bg_left_br.gif")"/>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    var tree = null;
+    var root = new TreeNode('系统菜单');
+    var fun1 = new TreeNode('医院概况信息管理');
+    var fun1_1 = new TreeNode('编辑医院简介', '/Admin/SinglePage/Edit/1', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun1_2 = new TreeNode('领导信息列表', '/Admin/Readers', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun1_3 = new TreeNode('编辑组织架构', '/Admin/SinglePage/Edit/2', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun1_4 = new TreeNode('医院图片', '/Admin/HospitalImages', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun1_5 = new TreeNode('联系我们', '/Admin/SinglePage/Edit/18', 'tree_node.gif', null, 'tree_node.gif', null);
+
+    fun1.add(fun1_1);
+    fun1.add(fun1_2);
+    fun1.add(fun1_3);
+    fun1.add(fun1_4);
+    fun1.add(fun1_5);
+    root.add(fun1);
+
+    var fun11 = new TreeNode('就医指南信息管理');
+
+    var fun11_1 = new TreeNode('就医指南信息列表', '/Admin/SinglePage/Index/就医指南', 'tree_node.gif', null, 'tree_node.gif', null);
+    fun11.add(fun11_1);
+    root.add(fun11);
+
+    var fun2 = new TreeNode('医生信息管理');
+    
+    var fun2_1 = new TreeNode('添加医生信息', '/Admin/Doctors/Create', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun2_2 = new TreeNode('医生信息列表', '/Admin/Doctors', 'tree_node.gif', null, 'tree_node.gif', null);
+    fun2.add(fun2_1);
+    fun2.add(fun2_2);
+    root.add(fun2);
+
+
+    var fun3 = new TreeNode('新闻信息管理');
+    var fun3_1 = new TreeNode('添加新闻信息', '/Admin/News/Create', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun3_2 = new TreeNode('新闻信息列表', '/Admin/News', 'tree_node.gif', null, 'tree_node.gif', null);
+    fun3.add(fun3_1);
+    fun3.add(fun3_2);
+    root.add(fun3);
+
+    var fun4 = new TreeNode('健康信息管理');
+    var fun4_1 = new TreeNode('添加健康信息', '/Admin/Health/Create', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun4_2 = new TreeNode('健康信息列表', '/Admin/Health', 'tree_node.gif', null, 'tree_node.gif', null);
+    fun4.add(fun4_1);
+    fun4.add(fun4_2);
+    root.add(fun4);
+
+    var fun5 = new TreeNode('医疗技术信息管理');
+    var fun5_1 = new TreeNode('添加医疗技术信息', '/Admin/MedicaTech/Create', 'tree_node.gif', null, 'tree_node.gif', null);
+    var fun5_2 = new TreeNode('医疗技术信息列表', '/Admin/MedicaTech', 'tree_node.gif', null, 'tree_node.gif', null);
+    fun5.add(fun5_1);
+    fun5.add(fun5_2);
+    root.add(fun5);
+
+
+    var fun6 = new TreeNode('医院文化信息管理');
+    var fun6_1 = new TreeNode('医院文化信息列表', '/Admin/SinglePage/Index/医院文化', 'tree_node.gif', null, 'tree_node.gif', null);
+    fun6.add(fun6_1);
+    root.add(fun6);
+
+    var fun7 = new TreeNode('论坛信息管理');
+    var fun7_1 = new TreeNode('帖子信息', '/Admin/MessageInfo', 'tree_node.gif', null, 'tree_node.gif', null);
+    fun7.add(fun7_1);
+    root.add(fun7);
+
+    var fun8 = new TreeNode('用户信息管理');
+    var fun8_1 = new TreeNode('用户信息', '/Admin/Users', 'tree_node.gif', null, 'tree_node.gif', null);
+    fun8.add(fun8_1);
+    root.add(fun8);
+    
+
+
+    tree = new Tree(root);
+    tree.show('menuTree');
+</script>
+</body>
+</html>

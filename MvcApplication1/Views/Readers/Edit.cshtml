@@ -1,0 +1,137 @@
+﻿@model MvcApplication1.Models.ReadersModels
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+<link href="@Url.Content("~/Scripts/uploadify/uploadify.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/uploadify/jquery.uploadify-3.2.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/uploadify/UploadHeadImg.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>ReadersModels</legend>
+
+        @Html.HiddenFor(model => model.ReaderID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ReaderName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ReaderName)
+            @Html.ValidationMessageFor(model => model.ReaderName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Position)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Position)
+            @Html.ValidationMessageFor(model => model.Position)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Sex)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model=>model.Sex,ViewBag.sexlist as SelectList)
+            @Html.ValidationMessageFor(model => model.Sex)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Birthday)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Birthday)
+            @Html.ValidationMessageFor(model => model.Birthday)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Images)
+        </div>
+        <div class="editor-field">
+            <div id="ImageFile">
+                <img src="@Model.Images" width="80" height="80"/>
+            </div>
+            @Html.HiddenFor(model => model.Images)
+            @Html.ValidationMessageFor(model => model.Images)
+            <input type="file" id="upload"/>
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NativePlace)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NativePlace)
+            @Html.ValidationMessageFor(model => model.NativePlace)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nationality)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nationality)
+            @Html.ValidationMessageFor(model => model.Nationality)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Duty)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Duty)
+            @Html.ValidationMessageFor(model => model.Duty)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.QQ)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.QQ)
+            @Html.ValidationMessageFor(model => model.QQ)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Remark)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Remark)
+            @Html.ValidationMessageFor(model => model.Remark)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("返回列表", "Index")
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#Birthday").datepicker({
+            changeMonth: true,
+            changeYear: true
+        });
+    })
+</script>

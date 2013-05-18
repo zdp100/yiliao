@@ -1,0 +1,246 @@
+﻿@{
+    ViewBag.Title = "userSet";
+}
+   <!-- content -->
+   <div id="content">
+      <div class="container">
+      	<!-- main-banner-small begin -->
+         <div class="main-banner-small">
+         	<div class="inner">
+            	<h1>Even the biggest success Starts with a first step</h1>
+            </div>
+         </div>
+         <!-- main-banner-small end -->
+         <div class="section">
+         	<!-- box begin -->
+            <div class="box">
+               <div class="border-top">
+                  <div class="border-right">
+                     <div class="border-bot">
+                        <div class="border-left">
+                           <div class="left-top-corner">
+                              <div class="right-top-corner">
+                                 <div class="right-bot-corner">
+                                    <div class="left-bot-corner">
+                                       <div class="inner">
+<style>
+    .ct2_a .mn {
+        float: right;
+        width: 810px;
+    }
+    .ct2_a .mn {
+        display: inline;
+        margin-right: 10px;
+        padding-top: 10px;
+        width: 700px;
+    }
+    #ct {
+min-height: 300px;
+}
+
+.ct2_a .tb {
+margin-top: 3px;
+}
+.tb {
+margin-top: 10px;
+padding-left: 5px;
+line-height: 30px;
+border-bottom: 1px solid #CDCDCD;
+}
+.tb li {
+float: left;
+margin: 0 3px -1px 0;
+}
+.tb .a a, .tb .current a {
+border-bottom-color: #FFF;
+background: #FFF;
+font-weight: 700;
+}
+.tb a {
+display: block;
+padding: 0 10px;
+border: 1px solid #CDCDCD;
+background: #F5F8FF;
+}
+.appl {
+float: left;
+overflow: hidden;
+margin-bottom: 10px;
+padding: 6px 10px;
+width: 117px;
+}
+.tbn {
+margin: -6px -10px 0;
+}
+.tbn .mt {
+padding: 10px;
+}
+.bbda {
+border-bottom: 1px dashed #CDCDCD;
+}
+.mt {
+padding: 10px 0;
+font-size: 16px;
+margin: 0;
+}
+.appl ul {
+margin: 3px 0;
+}
+.tbn ul {
+margin: 0;
+}
+
+.tbn li {
+margin: 0 10px;
+height: 33px;
+border-bottom: 1px dashed #CCC;
+}
+.appl li {
+display: block;
+height: 28px;
+line-height: 28px;
+white-space: nowrap;
+word-wrap: normal;
+font-size: 14px;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+.tbn li.a {
+margin: -1px 0 0;
+padding: 0 10px 0 9px;
+border-top: 1px solid #CDCDCD;
+border-bottom-style: solid;
+background: #FFF;
+}
+.tbn ul a {
+color: #000;
+display: block;
+height: 33px;
+line-height: 33px;
+}
+.appl li a {
+text-decoration: none !important;
+}
+
+.tfm th 
+{
+    text-align: left;
+font-weight: 400;
+padding-top: 9px;
+padding-right: 5px;
+width: 130px;
+}
+.tfm caption, .tfm th, .tfm td {
+vertical-align: top;
+padding: 7px 0;
+}
+
+.tfm .pt, .tfm .px {
+margin-right: 3px;
+width: 330px;
+}
+.px {
+height: 17px;
+}
+.px, .pt {
+padding: 2px 4px;
+line-height: 17px;
+}
+.px, .pt, .ps, select {
+border: 1px solid;
+border-color: #848484 #E0E0E0 #E0E0E0 #848484;
+background: #FFF url(/Content/images/px.png) repeat-x 0 0;
+color: ;
+}
+.ps, select {
+padding: 2px 2px 2px 1px;
+}
+.tfm .d {
+clear: both;
+margin: 5px 0;
+color: #999;
+}
+
+.pn {
+vertical-align: middle;
+overflow: hidden;
+margin-right: 3px;
+padding: 0;
+height: 23px;
+border: 1px solid #999;
+background: #E5E5E5 url(/Content/images/pn.png) repeat-x 0 0;
+cursor: pointer;
+-moz-box-shadow: 0 1px 0 #E5E5E5;
+-webkit-box-shadow: 0 1px 0 #E5E5E5;
+box-shadow: 0 1px 0 #E5E5E5;
+}
+.pnc, a.pnc {
+border-color: #235994;
+background-color: #06C;
+background-position: 0 -48px;
+color: #FFF !important;
+}
+.pn em, .pn span, .pn strong {
+padding: 0 10px;
+line-height: 21px;
+}
+.pn em, .pn strong {
+font-weight: 700;
+}
+.xs2 {
+font-size: 14px !important;
+    margin: 0;
+    text-align: left;
+}
+p {
+    text-align: left;
+}
+</style>     
+                               
+                                       
+                                           <div id="ct" class="ct2_a wp cl">
+                                               <div class="mn">
+                                                   <div id="usermain" class="bm bw0">
+                                                    @Html.Action("userSetPersonal","qiantai")
+                                                   </div>
+                                               </div>
+                        
+                                               <div class="appl">
+                                                   <div class="tbn">
+                                                        <h3 class="mt bbda">设置</h3>
+                                                        <ul>
+                                                            <li> @Ajax.ActionLink("修改头像", "userSetHeadPor", new AjaxOptions() { UpdateTargetId = "usermain" })</li>
+                                                            <li class="a">@Ajax.ActionLink("个人资料", "userSetPersonal", new AjaxOptions() { UpdateTargetId = "usermain" })</li>
+                                                            <li>@Ajax.ActionLink("密码安全", "userSetPassWord", new AjaxOptions() { UpdateTargetId = "usermain" })</li>
+                                                        </ul>
+                                                    </div>
+                                               </div>
+                                                                 <div style="clear:both;"></div>
+</div>
+                                       
+                                           <script type="text/javascript">
+                                               $(function () {
+                                                   $(".appl .tbn li a").click(function () {
+                                                       $(".appl .tbn li").removeClass();
+                                                       $(this).parent().addClass("a");
+                                                   });
+                                               });
+                                           </script>
+                                       
+                                       
+                                       
+
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- box end -->
+         </div>
+      </div>
+   </div>

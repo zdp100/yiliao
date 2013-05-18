@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MvcApplication1.Models.SinglePageModels>
+@{
+    ViewBag.Title = "医院文化";
+}
+
+   <!-- content -->
+   <div id="content">
+      <div class="container">
+      	<!-- main-banner-small begin -->
+         <div class="main-banner-small">
+         	<div class="inner">
+            	<h1>Even the biggest success Starts with a first step</h1>
+            </div>
+         </div>
+         <!-- main-banner-small end -->
+         <div class="wrapper page4">
+         	<div class="col-1 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                           <div class="inner">
+                                               <h2>医院文化</h2>
+                                              <div class="clr"></div>
+                                               <ul class="sb_menu">
+                                                   @foreach (var m in Model)
+                                                   {
+                                                       <li><a href="/HospitalCulture/@m.ID">@m.Title</a></li>
+                                                   }
+                                               </ul>
+                                           </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>
+            <div class="col-2 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                           <div class="inner">
+                                               @{
+                                                   var treat = (MvcApplication1.Models.SinglePageModels) ViewData["treat"];
+                                               }
+                                               <h2>@treat.Title</h2>
+                                               @Html.Raw(treat.Content)
+                                           </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>
+         </div>
+      </div>
+   </div>

@@ -1,0 +1,36 @@
+﻿@model MvcApplication1.Common.HomeRightShow
+            <div class="col-2 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                           <div class="inner">
+                                               <h2>@Model.Type</h2>
+                                               <div class="NewsShowContent">
+                                                   <h3>@Model.Title</h3>
+                                                   <div class="artInfo">
+                                                       <span id="pub_date">@string.Format("{0:yyyy-MM-dd}",Model.PubDate)</span>&nbsp;&nbsp; <span id="media_name">@(Model.UserName??"Admin")</span>&nbsp;&nbsp;
+                                                       <span id="media_count">阅读量(<span class="f_red">@(Model.Count??0)</span>)</span>
+                                                   </div>
+                                                   <div class="artBody">
+                                                       @Html.Raw(Model.Content) 
+                                                   </div>
+                                               </div>
+                                           </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>

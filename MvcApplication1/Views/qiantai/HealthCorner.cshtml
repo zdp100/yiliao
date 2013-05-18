@@ -1,0 +1,23 @@
+﻿@model PagedList.StaticPagedList<MvcApplication1.Common.listModel>
+@{
+    ViewBag.Title = ViewBag.type;
+}
+@using PagedList
+@using PagedList.Mvc
+<link href="@Url.Content("~/Content/PagedList.css")" rel="stylesheet" type="text/css" />
+   <!-- content -->
+   <div id="content">
+      <div class="container">
+      	<!-- main-banner-small begin -->
+         <div class="main-banner-small">
+         	<div class="inner">
+            	<h1>Even the biggest success Starts with a first step</h1>
+            </div>
+         </div>
+         <!-- main-banner-small end -->
+         <div class="wrapper page4">
+         	@Html.Partial("HomeLeft",ViewBag.left as MvcApplication1.Common.HomeLeft)
+            @Html.Action("homeRightlist", new { listmodel = Model, strTypes = "健康园地", strType = ViewBag.type, @strActions = "HealthCorner", @strAction = "HealthCornerShow" })
+         </div>
+      </div>
+   </div>

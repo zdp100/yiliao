@@ -1,0 +1,34 @@
+﻿@model MvcApplication1.Common.HomeLeft
+
+         	<div class="col-1 maxheight">
+            	<!-- box begin -->
+               <div class="box maxheight">
+                  <div class="border-top maxheight">
+                     <div class="border-right maxheight">
+                        <div class="border-bot maxheight">
+                           <div class="border-left maxheight">
+                              <div class="left-top-corner maxheight">
+                                 <div class="right-top-corner maxheight">
+                                    <div class="right-bot-corner maxheight">
+                                       <div class="left-bot-corner maxheight">
+                                           <div class="inner">
+                                               <h2>@Model.strName</h2>
+                                              <div class="clr"></div>
+                                               <ul class="sb_menu">
+                                                   @foreach (var m in Model.list)
+                                                   {
+                                                       <li><a href="/@Model.strAction?type=@m">@m</a></li>
+                                                   }
+                                               </ul>
+                                           </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- box end -->
+            </div>
