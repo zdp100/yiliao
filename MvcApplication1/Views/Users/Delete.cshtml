@@ -1,51 +1,51 @@
 ﻿@model MvcApplication1.Models.UsersModels
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "删除";
 }
 
-<h2>Delete</h2>
+<h2>删除</h2>
 
 <h3>你确定要删除它吗？</h3>
 <fieldset>
-    <legend>UsersModels</legend>
+    <legend>用户信息管理</legend>
 
-    <div class="display-label">UserName</div>
+    <div class="display-label">用户名</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.UserName)
     </div>
 
-    <div class="display-label">UserPassword</div>
+    <div class="display-label">密码</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.UserPassword)
     </div>
 
-    <div class="display-label">Limit</div>
+    <div class="display-label">权限</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Limit)
     </div>
 
-    <div class="display-label">Sex</div>
+    <div class="display-label">性别</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Sex)
     </div>
 
-    <div class="display-label">Birthday</div>
+    <div class="display-label">生日</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Birthday)
     </div>
 
-    <div class="display-label">Images</div>
+    <div class="display-label">头像</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Images)
     </div>
 
-    <div class="display-label">NativePlace</div>
+    <div class="display-label">国籍</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.NativePlace)
     </div>
 
-    <div class="display-label">Nationality</div>
+    <div class="display-label">籍贯</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Nationality)
     </div>
@@ -55,24 +55,24 @@
         @Html.DisplayFor(model => model.QQ)
     </div>
 
-    <div class="display-label">Phone</div>
+    <div class="display-label">电话</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Phone)
     </div>
 
-    <div class="display-label">Email</div>
+    <div class="display-label">电子邮件</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Email)
     </div>
 
-    <div class="display-label">Remark</div>
+    <div class="display-label">备注</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Remark)
     </div>
 </fieldset>
 @using (Html.BeginForm()) {
     <p>
-        <input type="submit" value="Delete" /> |
+        <input type="submit" value="删除" /> |
         @Html.ActionLink("返回列表", "Index")
     </p>
 }

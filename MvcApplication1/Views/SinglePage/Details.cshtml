@@ -1,13 +1,13 @@
 ﻿@model MvcApplication1.Models.SinglePageModels
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "详情";
 }
 
-<h2>Details</h2>
+<h2>详情</h2>
 
 <fieldset>
-    <legend>SinglePageModels</legend>
+    <legend>医院信息情况</legend>
 
     <div class="display-label">Title</div>
     <div class="display-field">
@@ -35,6 +35,6 @@
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("编辑", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("返回列表", "Index")
 </p>

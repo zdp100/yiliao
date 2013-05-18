@@ -1,10 +1,10 @@
 ﻿@model MvcApplication1.Models.HospitalImagesModels
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "编辑";
 }
 
-<h2>Edit</h2>
+<h2>编辑</h2>
 
 <link href="@Url.Content("~/Scripts/uploadify/uploadify.css")" rel="stylesheet" type="text/css" />
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
@@ -16,7 +16,7 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>HospitalImagesModels</legend>
+        <legend>医院图片信息</legend>
         
         @Html.HiddenFor(model => model.ImageID)
 
@@ -100,5 +100,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("返回列表", "Index")
 </div>

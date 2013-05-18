@@ -87,7 +87,6 @@ namespace MvcApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                usersmodels.UserPassword = DESEncrypt.Encrypt(usersmodels.UserPassword);
                 db.Entry(usersmodels).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

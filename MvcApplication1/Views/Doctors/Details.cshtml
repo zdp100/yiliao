@@ -1,13 +1,13 @@
 ﻿@model MvcApplication1.Models.DoctorsModels
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "详情";
 }
 
-<h2>Details</h2>
+<h2>详情</h2>
 
 <fieldset>
-    <legend>DoctorsModels</legend>
+    <legend>医生信息管理</legend>
 
     <div class="display-label">DoctorName</div>
     <div class="display-field">
@@ -65,6 +65,6 @@
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.DoctorID }) |
+    @Html.ActionLink("编辑", "Edit", new { id=Model.DoctorID }) |
     @Html.ActionLink("返回列表", "Index")
 </p>

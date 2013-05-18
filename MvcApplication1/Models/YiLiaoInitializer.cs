@@ -95,8 +95,8 @@ namespace MvcApplication1.Models
 
             var reader = new List<ReadersModels>
                 {
-                    new ReadersModels{ReaderName = "韦秋云",Position = "打杂",Sex = "女",Images = "/UploadFile/image/39e0871c-72b6-440d-b09a-6e1876a46a0d.jpg",Duty = "喜欢喊人去吃饭",Email = "123@123.123"},
-                    new ReadersModels{ReaderName = "韦秋云1",Position = "打杂",Sex = "女",Images = "/UploadFile/image/39e0871c-72b6-440d-b09a-6e1876a46a0d.jpg",Duty = "喜欢喊人去吃饭",Email = "123@123.123"},
+                    new ReadersModels{ReaderName = "韦秋云",Position = "院长",Sex = "女",Images = "/UploadFile/image/39e0871c-72b6-440d-b09a-6e1876a46a0d.jpg",Duty = "喜欢喊人去吃饭",Email = "123@123.123"},
+                    new ReadersModels{ReaderName = "韦秋云1",Position = "副院长",Sex = "女",Images = "/UploadFile/image/39e0871c-72b6-440d-b09a-6e1876a46a0d.jpg",Duty = "喜欢喊人去吃饭",Email = "123@123.123"},
                     new ReadersModels{ReaderName = "韦秋云2",Position = "打杂",Sex = "女",Images = "/UploadFile/image/39e0871c-72b6-440d-b09a-6e1876a46a0d.jpg",Duty = "喜欢喊人去吃饭",Email = "123@123.123"},
                     new ReadersModels{ReaderName = "韦秋云3",Position = "打杂",Sex = "女",Images = "/UploadFile/image/39e0871c-72b6-440d-b09a-6e1876a46a0d.jpg",Duty = "喜欢喊人去吃饭",Email = "123@123.123"},
                     new ReadersModels{ReaderName = "韦秋云4",Position = "打杂",Sex = "女",Images = "/UploadFile/image/39e0871c-72b6-440d-b09a-6e1876a46a0d.jpg",Duty = "喜欢喊人去吃饭",Email = "123@123.123"},
@@ -108,9 +108,9 @@ namespace MvcApplication1.Models
 
             var doctor = new List<DoctorsModels>
                 {
-                     new DoctorsModels{DoctorName = "韦秋云",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "喜欢喊人去吃饭",Email = "123@123.123",Birthday = DateTime.Now},
-                     new DoctorsModels{DoctorName = "韦秋云1",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "喜欢喊人去吃饭",Email = "123@123.123",Birthday = DateTime.Now},
-                     new DoctorsModels{DoctorName = "韦秋云2",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "喜欢喊人去吃饭",Email = "123@123.123",Birthday = DateTime.Now},
+                     new DoctorsModels{DoctorName = "韦秋云",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "主治内科",Email = "123@123.123",Birthday = DateTime.Now},
+                     new DoctorsModels{DoctorName = "韦秋云1",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "主治骨科",Email = "123@123.123",Birthday = DateTime.Now},
+                     new DoctorsModels{DoctorName = "韦秋云2",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "主治心理学",Email = "123@123.123",Birthday = DateTime.Now},
                      new DoctorsModels{DoctorName = "韦秋云3",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "喜欢喊人去吃饭",Email = "123@123.123",Birthday = DateTime.Now},
                      new DoctorsModels{DoctorName = "韦秋云4",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "喜欢喊人去吃饭",Email = "123@123.123",Birthday = DateTime.Now},
                      new DoctorsModels{DoctorName = "韦秋云5",sex = "女",Images = "/UploadFile/image/1.jpg",KeySkill = "喜欢喊人去吃饭",Email = "123@123.123",Birthday = DateTime.Now},
@@ -129,6 +129,13 @@ namespace MvcApplication1.Models
                     new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
                     new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
                     new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
+                    new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
+                    new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
+                    new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
+                    new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
+                    new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
+                    new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
+                     new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
                     new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
                     new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},
                     new NewsModels{Title = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",Content = "热烈庆祝桂林电子科技大学校医院门户网站建设成功",NewType = "动态新闻",PubDate = DateTime.Now},

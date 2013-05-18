@@ -1,50 +1,50 @@
 ﻿@model MvcApplication1.Models.ReadersModels
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "详情";
 }
 
-<h2>Details</h2>
+<h2>详情</h2>
 
 <fieldset>
-    <legend>ReadersModels</legend>
+    <legend>现任领导信息管理</legend>
 
-    <div class="display-label">ReaderName</div>
+    <div class="display-label">姓名</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.ReaderName)
     </div>
 
-    <div class="display-label">Position</div>
+    <div class="display-label">职位</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Position)
     </div>
 
-    <div class="display-label">Sex</div>
+    <div class="display-label">性别</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Sex)
     </div>
 
-    <div class="display-label">Birthday</div>
+    <div class="display-label">生日</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Birthday)
     </div>
 
-    <div class="display-label">Images</div>
+    <div class="display-label">图片</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Images)
     </div>
 
-    <div class="display-label">NativePlace</div>
+    <div class="display-label">国籍</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.NativePlace)
     </div>
 
-    <div class="display-label">Nationality</div>
+    <div class="display-label">籍贯</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Nationality)
     </div>
 
-    <div class="display-label">Duty</div>
+    <div class="display-label">职责</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Duty)
     </div>
@@ -54,22 +54,22 @@
         @Html.DisplayFor(model => model.QQ)
     </div>
 
-    <div class="display-label">Phone</div>
+    <div class="display-label">电话</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Phone)
     </div>
 
-    <div class="display-label">Email</div>
+    <div class="display-label">电子邮件</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Email)
     </div>
 
-    <div class="display-label">Remark</div>
+    <div class="display-label">备注</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Remark)
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.ReaderID }) |
+    @Html.ActionLink("编辑", "Edit", new { id=Model.ReaderID }) |
     @Html.ActionLink("返回列表", "Index")
 </p>

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication1", "MvcApplication1\MvcApplication1.csproj", "{E31C2A83-1EED-4402-BBFE-CE53406A2F6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{DA33D7F8-0781-41CF-AC5C-7D42208D8B3B}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7DB43B12-E174-419C-B6D5-105CCB08B0A4}"
 	ProjectSection(SolutionItems) = preProject
 		Local.testsettings = Local.testsettings
@@ -23,6 +25,10 @@ Global
 		{E31C2A83-1EED-4402-BBFE-CE53406A2F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E31C2A83-1EED-4402-BBFE-CE53406A2F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E31C2A83-1EED-4402-BBFE-CE53406A2F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA33D7F8-0781-41CF-AC5C-7D42208D8B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA33D7F8-0781-41CF-AC5C-7D42208D8B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA33D7F8-0781-41CF-AC5C-7D42208D8B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA33D7F8-0781-41CF-AC5C-7D42208D8B3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

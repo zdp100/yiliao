@@ -41,7 +41,7 @@
             @Html.DisplayFor(modelItem => item.Birthday)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UserID }) |
+            @Html.ActionLink("编辑", "Edit", new { id=item.UserID }) |
             @Html.ActionLink("Details", "Details", new { id=item.UserID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.UserID }, new { onclick = "return confirm('你确定要删除这条记录吗？')" })
         </td>
